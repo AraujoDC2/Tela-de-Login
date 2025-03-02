@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/2ac7537073.js" crossorigin="anonymous"></script>
+    <title>Acessar Conta</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+
+    <header class="header">
+      <a href="#" class="logo">Logo</a>
+      <nav class="navbar">
+        <a href="#" onclick="abrirHome()">Home</a>
+        <a href="#" type="button" onclick="abrirLogin()">Login</a>
+      </nav>
+    </header>
+    <div class="containerHome" id="containerHome">
+      <h1>Olá, eu sou Diego Carmo 👋</h1>
+
+      <p>
+        <br>
+        Este projeto foi desenvolvido com foco em proporcionar uma experiência de usuário moderna e fluida por meio de uma tela de login interativa, com transição de telas em uma única página web. <br>
+        Utilizando <strong>HTML, CSS e JavaScript</strong>, implementei a funcionalidade de troca dinâmica entre a tela de login e a tela de cadastro, sem a necessidade de recarregar a página. <br>
+        A implementação inclui: </p>
+
+        <h3>Estrutura HTML:</h3>
+
+        <ul>
+          <li>Criação de uma página com navegação entre diferentes seções (Tela de Login, Cadastro e Home).</li>
+          <li>Utilização de ícones do FontAwesome para agregar valor visual e funcionalidade aos campos de entrada.</li>
+        </ul>
+        <h3>Estilização com CSS:</h3>
+        <ul>
+          <li>Uso de propriedades de design modernas, como o backdrop-filter para o efeito de desfoque no fundo, garantindo uma interface limpa e profissional.</li>
+          <li>Animações sutis, como transições de opacidade e efeitos de foco nos campos de entrada, proporcionando uma interação mais agradável ao usuário.</li>
+          <li>Aplicação de uma paleta de cores equilibrada com o uso de tons neutros e contrastantes para uma boa legibilidade e usabilidade.</li>
+        </ul>
+
+        <h3>Interatividade com JavaScript:</h3>
+
+        <ul>
+        <li>Validação de campos de entrada em tempo real, com feedback visual para campos obrigatórios, assegurando que o usuário preencha corretamente o formulário.</li>
+        <li>Manipulação das seções de login e cadastro, permitindo alternância fluida entre as telas sem necessidade de recarregamento de página.</li>
+        <li>Implementação de um sistema de mensagens de erro dinâmicas, melhorando a comunicação com o usuário ao preencher os formulários.</li>
+        </ul>
+
+        <p>Este projeto reflete um esforço na integração de design e funcionalidade, com ênfase em usabilidade, clareza visual e eficiência na interação. A transição de telas foi otimizada para garantir uma navegação sem interrupções, com o objetivo de oferecer uma experiência de login intuitiva e agradável.</p>
+      
+    </div>
+
+
+
+    <div class="container" id="tela-login" style="display: none;">
+      <div id="entradasaidalogin">
+        <a href="#">
+          <i class="fa-solid fa-circle-xmark" onclick="entradasaidalogin()"></i>
+        </a>
+      </div>
+      <div class="form" id="login-form">
+         <!-- Tela de Login -->
+        <h1>Login</h1>
+        <!-- Campo usuário e senha -->
+        <div class="usuario">
+          <input type="text" id="usuario" placeholder="Usuário">
+          <i class="fa-solid fa-user"></i>
+        </div>
+        
+        <div class="usuario">
+          <input type="password" id="senha" placeholder="Senha">
+          <i class="fa-solid fa-lock"></i>
+        </div>
+        <!-- Checkbox lembrar senha e Esqueci a senha -->
+        <div class="lembraPass">
+          <label>
+            <input type="checkbox">Lembrar senha
+          </label>
+          <a href="#">Esqueci a senha  
+          </a>
+        </div>
+
+        <!-- Botão de login -->
+        <button class="acesso" type="button" onclick="validarCampos()">Entrar</button>
+
+        <!-- Mensagem de Campos faltantes -->
+        <div id="mensagem"></div>
+        <div class="texto">
+          <p>ou faça login usando</p> <br>
+        </div>
+        
+        <!-- API para acesso -->
+        <div class="redes-sociais">
+          
+          <a href="#" onclick="aviso()"><i class="fa-brands fa-google-plus-g"></i></a> <br>
+          <div class="mensagem"></div>
+        </div>
+
+        <!-- Cadastre-se -->
+        <div class="registro">
+          <p>Não tem uma conta? <a onclick="mostraCadastro()">Cadastre-se</a></p>
+        </div>
+      </div>
+       <!-- Tela de Cadastro -->
+      <div class="cadastro" id="signup-form"  style="display: none">
+        <h2>Cadastro</h2>
+
+        <div class="usuario">
+          <input type="email" id="nomeCadastro" placeholder="Nome">
+          <i class="fa-solid fa-user-tie"></i>
+        </div>
+
+        <div class="usuario">
+          <input type="email" id="emailCadastro" placeholder="E-mail">
+          <i class="fa-solid fa-envelope"></i>
+        </div>
+
+        <div class="usuario">
+          <input type="text" id="usuarioCadastro" placeholder="Usuário">
+          <i class="fa-solid fa-user"></i>
+        </div>
+
+        <div class="usuario">
+          <input type="password" id="senhaCadastro" placeholder="Senha">
+          <i class="fa-solid fa-lock"></i>
+        </div>
+        <div class="termosCadastro">
+          <label>
+            <input type="checkbox" id="TermosServicos"> Concordo com os <a href="#">Termos e Serviços</a>
+          </label>
+          <label>
+            <input type="checkbox"> Desejo receber atualizações via e-mail
+          </label>
+        </div>
+
+        <button class="realizaCadastro" type="button" onclick="realizaCadastro()">Cadastro</button>
+
+        <div id="mensagemCadastro"></div>
+
+        <div class="logon">
+          <p>Já tem uma conta? <a onclick="mostraLogin()">Faça login</a></p> 
+        </div>
+
+      </div>
+    </div>
+    
+    <script src="script.js"></script>
+  </body>
+</html>
